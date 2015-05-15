@@ -6,8 +6,8 @@ Author URI: http://internet-pr-beratung.de/
 Plugin URI: http://internet-pr-beratung.de/google-trends-wordpress/
 Tags: shortcode, google trends,charts,google
 Requires at least: 3.5.0
-Tested up to: 4.1
-Stable tag: 1.0
+Tested up to: 4.2.0
+Stable tag: 1.1
 License: GPLv2 or Alter
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

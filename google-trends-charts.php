@@ -4,7 +4,7 @@
  * Plugin Name: Google Trends & Charts
  * Plugin URI:  http://internet-pr-beratung.de/google-trends-wordpress/ 
  * Description: Das Plugin gibt Google Trends Graphen per Shortcode aus, zudem kannst Du die Top-Suchanfragen bei Google in einem Widget und im Dashboard ausgeben.
- * Version:     1.0
+ * Version:     1.1
  * Author:      Sammy Zimmermanns
  * Author URI:  http://internet-pr-beratung.de
  * License:     GPL-2.0+
@@ -68,14 +68,15 @@ function topsearches($atts, $content = null) {
         $lang=esc_attr($lang);
         $pn=esc_attr($pn);
         $tn=esc_attr($tn);
-        ob_start();
+        
 ?>
   <iframe scrolling="no" style="border:none;" width="<?php echo $w;?>" height="<?php echo $h;?>" src="http://www.google.<?php echo $lang;?>/trends/hottrends/widget?pn=p<?php echo $pn;?>&amp;tn=<?php echo $tn;?>&amp;h=<?php echo $h;?>"></iframe>
  <?php
- return ob_get_clean();
+
 }
 
-add_shortcode('topsearches' , 'topsearches' );
+add_shortcode('topsearches', 'topsearches' );
+add_filter('widget_text', 'do_shortcode', 11);
 ?>
 <?php
 //The widget code starts here
